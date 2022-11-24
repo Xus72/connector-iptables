@@ -1,0 +1,16 @@
+opencti:
+  url: 'http://localhost:8080'
+  token: 'ChangeMe'
+
+connector:
+  id: 'ChangeMe'
+  type: 'EXTERNAL_IMPORT'
+  name: 'Iptables'
+  scope: 'iptables' # MIME type or SCO
+  confidence_level: 100 # From 0 (Unknown) to 100 (Fully trusted)
+  log_level: 'info'
+  update_existing_update_existing_data: True
+
+iptables:
+  interval: 2
+  dir_logs: 'ChangeMe'

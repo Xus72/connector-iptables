@@ -1,0 +1,17 @@
+version: '3'
+services:
+  connector-test:
+    build: ./opencti-iptables
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=ChangeMe
+      - CONNECTOR_ID=ChangeMe
+      - CONNECTOR_TYPE=EXTERNAL_IMPORT
+      - CONNECTOR_NAME=Iptables 
+      - CONNECTOR_SCOPE=iptables # MIME type or Stix Object
+      - CONNECTOR_CONFIDENCE_LEVEL=100 # From 0 (Unknown) to 100 (Fully trusted)
+      - CONNECTOR_LOG_LEVEL=info
+      - IPTABLES_INTERVAL=2
+      - CONNECTOR_UPDATE_EXISTING_DATA=true
+      - IPTABLES_DIR_LOGS=ChangeMe
+    restart: always
